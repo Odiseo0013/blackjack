@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack 2022</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="titulo">BlackJack 2022</header>
+    
+    <div class="row m-5" id="menu">
+        <div class="col text-center">
+            <button id="btnNuevoJuego" class="btn btn-danger">Nuevo Juego</button>
+        </div>
+        <div class="col text-center">
+            <button id="btnPedir"  disabled="disabled" class="btn btn-primary">Pedir Carta</button>
+            <button id="btnPlantarse" disabled="disabled" class="btn btn-primary">Plantarse</button>
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class="col">
+            <h2 class="alert alert-info">Jugador 1 - <small>0</small></h2>
+            <div id="jugador-cartas" class="divCartas">
+                <!-- <img class="carta" src="assets/cartas/10H.png" /> -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row container mt-2">
+        <div class="col">
+            <h2 class="alert alert-danger">Computadora - <small>0</small></h2>
+            <div id="computadora-cartas" class="divCartas">
+                <!-- <img class="carta" src="assets/cartas/10H.png" /> -->
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/juego-min.js"></script>
+    <script>
+        console.log(miModulo);
+
+        document.querySelector('#btnNuevoJuego').addEventListener('click', () =>{ 
+            miModulo.nuevoJuego();
+        })
+
+    </script>
+</body>
+</html>
